@@ -1,0 +1,19 @@
+{
+  "name": "ROS2 Humble (ARM)",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "workspaceFolder": "/ros2_ws",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/ros2_ws,type=bind"
+  ],
+  "extensions": [
+    "ms-vscode.python",
+    "ms-vscode.cpptools",
+    "ms-iot.vscode-ros",
+    "ms-azuretools.vscode-docker"
+  ],
+  "postCreateCommand": "source /opt/ros/humble/setup.bash && rosdep update",
+  "remoteUser": "root"
+}
+
